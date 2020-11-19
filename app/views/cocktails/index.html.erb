@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>The great cocktail app</h1>
+    <ul>
+    <% @cocktails.each do |c| %>
+      <li><a href="cocktails/<%= c.id %>"><%= c.name %></a></li>
+    <% end %>
+  </ul>
+
+</div>
