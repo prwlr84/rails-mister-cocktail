@@ -1,0 +1,5 @@
+<div class="container">
+  <% Dose.all.where(cocktail_id: params[:cocktail_id]).each do |d| %>
+    <p><%= d.description %> - <%= d.ingredient_id%></p>
+  <% end %>
+</div>

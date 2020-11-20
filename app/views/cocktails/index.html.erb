@@ -1,5 +1,6 @@
 <div class="container">
   <h1>The great cocktail app</h1>
+  <%= link_to "ADD NEW AMAZING COCKTAIL", new_cocktail_path %>
     <ul>
     <% @cocktails.each do |c| %>
       <li><a href="cocktails/<%= c.id %>"><%= c.name %></a></li>

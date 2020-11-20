@@ -1,7 +1,11 @@
 <div class="container">
   <h1>This is what you need for <%= @cocktail.name %> </h1>
   <h2>Ingredients: </h2>
-    <% Dose.all.where(cocktail_id: @cocktail.id).each do |d| %>
-    <p><%= d.description %> - <%= Ingredient.find(d.ingredient_id).name %></p>
+    <% Dose.all.where(cocktail_id: @cocktail.id).each do |dose| %>
+    <p><%= dose.description %> - <%= Ingredient.find(dose.ingredient_id).name %></p>
     <% end %>
 </div>
+
+
+<%= link_to "BACK to all", cocktails_path %>
+<%= link_to "DELETE", @cocktail, method: :delete, data: { confirm: 'Really?'} %>
