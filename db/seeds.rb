@@ -13,14 +13,14 @@
     )
 end
 
-100.times do
-  Cocktail.create(
-    name: Faker::Cannabis.strain
-    )
-end
+# 100.times do
+#   Cocktail.create(
+#     name: Faker::Cannabis.strain
+#     )
+# end
 
-100.times do
-  Ingredient.create(
-    name: Faker::Food.ingredient
-    )
-end
+# 100.times do
+#   Ingredient.create(
+#     name: Faker::Food.ingredient
+#     )
+# end

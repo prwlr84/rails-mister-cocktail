@@ -1,6 +1,8 @@
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
   <%= f.association :ingredients, collection: Ingredient.all.order(:name), prompt: "Choose stuff"%>
+  <%= f.input :photo, as: :file %>
+  <% @cocktail.photo.attach(io: :file, filename: params[:photo], content_type: 'image/png') %>
   <%= f.button :submit %>
 
 <% end %>

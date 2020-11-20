@@ -1,10 +1,11 @@
 <div class="container">
-  <h1>The great cocktail app</h1>
+  <h1>The great cocktail app</h1> <form action="/cocktails/search" method="get" name="search"><input type="text" name="search"></form>
   <%= link_to "ADD NEW AMAZING COCKTAIL", new_cocktail_path %>
 
     <% @cocktails.each do |c| %>
     <div class="card">
       <a href="cocktails/<%= c.id %>"><%= c.name %></a>
+      <%= cl_image_tag c.photo.key, height: 300, width: 400, crop: :fill if c.photo.attached? %>
     </div>
     <% end %>
 
