@@ -12,3 +12,15 @@
     ingredient_id: rand(1..100)
     )
 end
+
+100.times do
+  Cocktail.create(
+    description: Faker::Cannabis.strain
+    )
+end
+
+100.times do
+  Ingredient.create(
+    description: Faker::Food.ingredient
+    )
+end
