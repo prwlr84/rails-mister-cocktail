@@ -5,22 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# 1000.times do
-#   Dose.create(
-#     description: Faker::Measurement.volume,
-#     cocktail_id: rand(1..100),
-#     ingredient_id: rand(1..100)
-#     )
-# end
+1000.times do
+  Dose.create(
+    description: Faker::Measurement.volume,
+    cocktail_id: rand(1..100),
+    ingredient_id: rand(1..100)
+    )
+end
 
 100.times do
   Cocktail.create(
-    description: Faker::Cannabis.strain
+    name: Faker::Cannabis.strain
     )
 end
 
 100.times do
   Ingredient.create(
-    description: Faker::Food.ingredient
+    name: Faker::Food.ingredient
     )
 end
